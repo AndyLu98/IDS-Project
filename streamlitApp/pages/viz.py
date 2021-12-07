@@ -43,7 +43,7 @@ def write():
 
 	new_path = os.path.dirname(__file__)
 	print(new_path)
-	my_file = new_path+'/cleaned_data/cleaned_tree_data_5.csv'
+	my_file = "streamlitApp/cleaned_data/cleaned_tree_data_5.csv'
 	df_trees = pd.read_csv(my_file,
 	                       encoding="ISO-8859-1", low_memory=False)
 
