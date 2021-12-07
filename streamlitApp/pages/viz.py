@@ -20,6 +20,7 @@ from IPython.display import Image
 import plotly
 import plotly.express as px
 from matplotlib.colors import LogNorm, Normalize
+import os
 
 
 
@@ -39,7 +40,11 @@ def write():
 	st.header("Exploratory Data Analysis")
 
 	sns.set()
-	df_trees = pd.read_csv("cleaned_data/cleaned_tree_data_5.csv",
+
+	new_path = os.path.dirname(__file__)
+	print(new_path)
+	my_file = new_path+'/cleaned_data/cleaned_tree_data_5.csv'
+	df_trees = pd.read_csv(my_file,
 	                       encoding="ISO-8859-1", low_memory=False)
 
 	# ----------- BEGIN:  Most popular Species vs Neighborhood -------------
